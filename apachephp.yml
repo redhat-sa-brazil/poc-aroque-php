@@ -14,11 +14,3 @@
         name: httpd
         state: started
         enabled: yes
-
-    - name: Deploy PHP - Apache
-      copy:
-        src: index.php
-        dest: /var/www/html/index.php
-        owner: manutencao
-        group: root
-        mode: 0644
