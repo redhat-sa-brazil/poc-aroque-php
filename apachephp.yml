@@ -4,25 +4,6 @@
   become: yes
 
   tasks:
-    - name: Disable Firewall on HTTP service
-      firewalld:
-        service: http
-        permanent: yes
-        state: enabled
-        immediate: yes
-
-    - name: Enable Firewall Port 80 (HTTP)
-      firewalld:
-        port: 80/tcp
-        permanent: yes
-        state: enabled
-
-    - name: Enable Firewall Port 22 (SSH)
-      firewalld:
-        port: 22/tcp
-        permanent: yes
-        state: enabled
-
     - name: Install Apache
       yum:
         name: httpd
